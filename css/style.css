@@ -510,6 +510,13 @@ h2 {
     text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 25px rgba(139, 92, 246, 0.4);
 }
 
+/* Experience job title styling */
+.experience-title {
+    color: #94a3b8;
+    font-weight: normal;
+    text-shadow: none;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
