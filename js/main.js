@@ -13,6 +13,7 @@ const sectionColors = {
 };
 
 const mainCard = document.querySelector('.main-card');
+const container = document.querySelector('.container');
 
 tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -22,15 +23,17 @@ tabBtns.forEach(btn => {
         tabBtns.forEach(b => b.classList.remove('active'));
         contentSections.forEach(s => s.classList.remove('active'));
 
-        // Remove all color classes from card
+        // Remove all color classes from card and container
         mainCard.classList.remove('color-contact', 'color-about', 'color-education', 'color-experience', 'color-research', 'color-projects');
+        container.classList.remove('color-contact', 'color-about', 'color-education', 'color-experience', 'color-research', 'color-projects');
 
         // Add active class to clicked button and corresponding section
         btn.classList.add('active');
         document.getElementById(targetTab).classList.add('active');
 
-        // Add color class to card
+        // Add color class to card and container
         mainCard.classList.add(`color-${targetTab}`);
+        container.classList.add(`color-${targetTab}`);
 
         // Change aurora color to match the section
         const color = sectionColors[targetTab];
