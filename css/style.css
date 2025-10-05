@@ -733,6 +733,10 @@ h2 {
     text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
 }
 
+#experience .project-item:hover {
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+
 #experience .project-item:hover .project-expand-icon {
     text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5);
 }
