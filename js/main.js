@@ -4,8 +4,7 @@ const contentSections = document.querySelectorAll('.content-section');
 
 // Color mappings for each section (RGB)
 const sectionColors = {
-    'contact': [0, 255, 136],      // Green
-    'about': [6, 182, 212],        // Cyan
+    'about': [0, 255, 136],        // Green
     'education': [59, 130, 246],   // Blue
     'experience': [139, 92, 246],  // Purple
     'projects': [255, 0, 110],     // Red/Pink
@@ -129,3 +128,11 @@ window.addEventListener('resize', () => {
         }
     }
 });
+
+// Function to programmatically switch to a tab (used by inline links)
+function switchToTab(tabName) {
+    const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
+    if (targetBtn) {
+        targetBtn.click();
+    }
+}

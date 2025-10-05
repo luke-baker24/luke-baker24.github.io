@@ -63,10 +63,10 @@ body {
     border-color: rgba(0, 255, 136, 0.3);
 }
 .main-card.color-about {
-    border-color: rgba(6, 182, 212, 0.3);
+    border-color: rgba(0, 255, 136, 0.3);
 }
 .main-card.color-education {
-    border-color: rgba(59, 130, 246, 0.3);
+    border-color: rgba(6, 182, 212, 0.3);
 }
 .main-card.color-experience {
     border-color: rgba(139, 92, 246, 0.3);
@@ -105,12 +105,12 @@ body {
     text-shadow: 0 0 30px rgba(0, 255, 136, 0.6), 0 0 60px rgba(0, 255, 136, 0.3);
 }
 .main-card.color-about .name {
-    color: #06b6d4;
-    text-shadow: 0 0 30px rgba(6, 182, 212, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
+    color: #00ff88;
+    text-shadow: 0 0 30px rgba(0, 255, 136, 0.6), 0 0 60px rgba(0, 255, 136, 0.3);
 }
 .main-card.color-education .name {
-    color: #3b82f6;
-    text-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.3);
+    color: #06b6d4;
+    text-shadow: 0 0 30px rgba(6, 182, 212, 0.6), 0 0 60px rgba(6, 182, 212, 0.3);
 }
 .main-card.color-experience .name {
     color: #8b5cf6;
@@ -168,15 +168,15 @@ body {
 }
 
 .tab-btn[data-tab="about"]:hover {
-    background: rgba(6, 182, 212, 0.1);
-    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
-    color: #06b6d4;
+    background: rgba(0, 255, 136, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    color: #00ff88;
 }
 
 .tab-btn[data-tab="education"]:hover {
-    background: rgba(59, 130, 246, 0.1);
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-    color: #3b82f6;
+    background: rgba(6, 182, 212, 0.1);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+    color: #06b6d4;
 }
 
 .tab-btn[data-tab="experience"]:hover {
@@ -209,23 +209,23 @@ body {
 }
 
 .tab-btn[data-tab="about"] {
-    border-color: rgba(6, 182, 212, 0.3);
+    border-color: rgba(0, 255, 136, 0.3);
 }
 .tab-btn[data-tab="about"].active {
+    background: rgba(0, 255, 136, 0.2);
+    border-color: #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    color: #00ff88;
+}
+
+.tab-btn[data-tab="education"] {
+    border-color: rgba(6, 182, 212, 0.3);
+}
+.tab-btn[data-tab="education"].active {
     background: rgba(6, 182, 212, 0.2);
     border-color: #06b6d4;
     box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
     color: #06b6d4;
-}
-
-.tab-btn[data-tab="education"] {
-    border-color: rgba(59, 130, 246, 0.3);
-}
-.tab-btn[data-tab="education"].active {
-    background: rgba(59, 130, 246, 0.2);
-    border-color: #3b82f6;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-    color: #3b82f6;
 }
 
 .tab-btn[data-tab="experience"] {
@@ -307,12 +307,12 @@ h2 {
     text-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 0 0 40px rgba(0, 255, 136, 0.3);
 }
 #about h2 {
-    color: #06b6d4;
-    text-shadow: 0 0 20px rgba(6, 182, 212, 0.6), 0 0 40px rgba(6, 182, 212, 0.3);
+    color: #00ff88;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 0 0 40px rgba(0, 255, 136, 0.3);
 }
 #education h2 {
-    color: #3b82f6;
-    text-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.3);
+    color: #06b6d4;
+    text-shadow: 0 0 20px rgba(6, 182, 212, 0.6), 0 0 40px rgba(6, 182, 212, 0.3);
 }
 #experience h2 {
     color: #8b5cf6;
@@ -362,12 +362,12 @@ h2 {
     text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
 }
 #about h3 {
-    color: #06b6d4;
-    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
 }
 #education h3 {
-    color: #3b82f6;
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+    color: #06b6d4;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
 }
 #experience h3 {
     color: #8b5cf6;
@@ -425,10 +425,70 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
 }
 
+/* Inline section links in about */
+.inline-link-experience {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.inline-link-experience:hover {
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 25px rgba(139, 92, 246, 0.4);
+}
+
+.inline-link-research {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.inline-link-research:hover {
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 0 0 25px rgba(255, 105, 180, 0.4);
+}
+
+.inline-link-projects {
+    color: #ff006e;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.inline-link-projects:hover {
+    text-shadow: 0 0 15px rgba(255, 0, 110, 0.8), 0 0 25px rgba(255, 0, 110, 0.4);
+}
+
+.inline-link-education {
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.inline-link-education:hover {
+    text-shadow: 0 0 15px rgba(6, 182, 212, 0.8), 0 0 25px rgba(6, 182, 212, 0.4);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+}
+
+.coursework-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 0;
 }
 
 /* Expandable project cards */
@@ -446,12 +506,33 @@ h2 {
 .project-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .project-expand-icon {
     font-size: 1.2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    line-height: 1.2rem;
+    margin-top: 0.1rem;
+}
+
+/* Section-specific expand icon glow */
+#projects .project-expand-icon {
+    color: #ff006e;
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.6), 0 0 20px rgba(255, 0, 110, 0.3);
+}
+
+#projects .project-item:hover .project-expand-icon {
+    text-shadow: 0 0 15px rgba(255, 0, 110, 0.8), 0 0 30px rgba(255, 0, 110, 0.5);
+}
+
+#research .project-expand-icon {
+    color: #ff69b4;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.6), 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+#research .project-item:hover .project-expand-icon {
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 0 0 30px rgba(255, 105, 180, 0.5);
 }
 
 /* Full-card overlay for expanded projects */
@@ -576,6 +657,16 @@ h2 {
     border-radius: 15px;
     font-size: 0.85rem;
     box-shadow: 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+/* Research-specific tech tags use pink instead of red */
+#research .tech-tag,
+#research-overlay-0 .tech-tag,
+#research-overlay-1 .tech-tag,
+#research-overlay-2 .tech-tag {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
 }
 
 /* Detail overlay content styling */

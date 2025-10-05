@@ -13,49 +13,39 @@
         <div class="main-card color-contact">
             <div class="header">
                 <h1 class="name">luke baker</h1>
-                <p class="tagline">computer science & engineering student</p>
+                <p class="tagline">computer science & engineering student at rose-hulman institute of technology</p>
             </div>
 
             <div class="nav-tabs">
-                <button class="tab-btn active" data-tab="contact">contact</button>
-                <button class="tab-btn" data-tab="about">about</button>
+                <button class="tab-btn active" data-tab="about">about</button>
                 <button class="tab-btn" data-tab="education">education</button>
                 <button class="tab-btn" data-tab="experience">experience</button>
                 <button class="tab-btn" data-tab="projects">projects</button>
                 <button class="tab-btn" data-tab="research">research</button>
             </div>
 
-            <!-- Contact Section -->
-            <div class="content-section active" id="contact">
-                <h2>contact</h2>
+            <!-- About Section -->
+            <div class="content-section active" id="about">
                 <div class="info-grid">
                     <div class="info-item">
-                        <h3>get in touch</h3>
-                        <p class="detail-text">i'm exploring opportunities in embedded systems and robotics, and seeking internships for summer 2027 and beyond.</p>
-                        <div class="contact-links">
-                            <a href="mailto:lukemb152@gmail.com" class="contact-link">lukemb152@gmail.com</a>
-                            <a href="https://www.linkedin.com/in/bakerlm" class="contact-link" target="_blank">linkedin</a>
-                            <a href="https://github.com/luke-baker24" class="contact-link" target="_blank">github</a>
-                        </div>
+                        <h3>about me</h3>
+                        <ul>
+                            <li>i'm a sophomore at <a href="#" class="inline-link-education" onclick="switchToTab('education'); return false;">rose-hulman institute of technology</a> pursuing a bachelor of science in computer science with a minor in electrical & computer engineering and robotics.</li>
+                            <li>i have <strong>5 years</strong> of c++ development experience across <a href="#" class="inline-link-projects" onclick="switchToTab('projects'); return false;">collaborative and individual projects</a>, and have deployed software to linux on robots and embedded devices for <a href="#" class="inline-link-experience" onclick="switchToTab('experience'); return false;">3 companies across 4 summers</a>. i've led <a href="#" class="inline-link-research" onclick="switchToTab('research'); return false;">4 impactful research projects</a> for the nsa, army, navy, marine corps, and coast guard, focusing on autonomous systems and robotics.</li>
+                        </ul>
                     </div>
                     <div class="info-item">
                         <h3>skills</h3>
                         <p><strong>languages:</strong> c++, c#, c, python, java, swift, bash, assembly, verilog, arduino, html/css/javascript</p>
                         <p><strong>frameworks & tools:</strong> qt, .net, xna, fna, flask, pytorch, firebase, xcode, git, github, docker, unity</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- About Section -->
-            <div class="content-section" id="about">
-                <h2>about me</h2>
-                <div class="info-grid">
                     <div class="info-item">
-                        <ul>
-                            <li>i'm a sophomore at rose-hulman institute of technology pursuing a bachelor of science in computer science with a minor in electrical & computer engineering and robotics. with a 4.00 gpa, i'm passionate about embedded systems, robotics, and creating impactful software solutions.</li>
-                            <li>i have 5 years of c++ development experience across collaborative and individual projects, and have deployed software to linux on robots and embedded devices for 3 companies across 4 summers. i've led 4 impactful research projects for the nsa, army, navy, marine corps, and coast guard, focusing on autonomous systems and robotics.</li>
-                            <li>currently, i'm working as a software co-op at raytheon applied signal technology, developing c++ software for signal processing. previously, i served as lead intern at the us military academy robotics research center, where i coordinated international robotics research events and directed teams in executing complex autonomous robot missions.</li>
-                        </ul>
+                        <h3>get in touch</h3>
+                        <div class="contact-links">
+                            <a href="mailto:lukemb152@gmail.com" class="contact-link">lukemb152@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/bakerlm" class="contact-link" target="_blank">linkedin</a>
+                            <a href="https://github.com/luke-baker24" class="contact-link" target="_blank">github</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,27 +54,30 @@
             <div class="content-section" id="education">
                 <h2>education</h2>
                 <div class="info-item">
-                    <h3>rose-hulman institute of technology</h3>
+                    <h3><a href="https://www.rose-hulman.edu/" class="inline-link-education" target="_blank" style="text-decoration: none;">rose-hulman institute of technology</a></h3>
                     <p><strong>terre haute, in | expected graduation: may 2028</strong></p>
-                    <p><strong>bachelor of science, computer science</strong></p>
-                    <p><strong>bachelor of science, computer engineering</strong></p>
-                    <p><strong>minor:</strong> robotics</p>
+                    <p><strong>bachelors of science in computer science and computer engineering | minor in robotics</strong></p>
                     <p><strong>gpa:</strong> 4.00</p>
                     <br>
-                    <p><strong>relevant coursework completed:</strong></p>
-                    <ul>
-                        <li>data structures & algorithms</li>
-                        <li>algorithmic problem solving</li>
-                        <li>systems programming</li>
-                    </ul>
-                    <br>
-                    <p><strong>upcoming coursework:</strong></p>
-                    <ul>
-                        <li>circuits & systems</li>
-                        <li>computer architecture</li>
-                        <li>embedded systems</li>
-                        <li>operating systems</li>
-                    </ul>
+                    <div class="coursework-grid">
+                        <div>
+                            <p><strong>relevant coursework completed:</strong></p>
+                            <ul>
+                                <li>data structures & algorithms</li>
+                                <li>algorithmic problem solving</li>
+                                <li>systems programming</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p><strong>upcoming coursework:</strong></p>
+                            <ul>
+                                <li>circuits & systems</li>
+                                <li>computer architecture</li>
+                                <li>embedded systems</li>
+                                <li>operating systems</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -248,19 +241,6 @@
 
                     <div class="info-item project-item" onclick="openProject(5)">
                         <div class="project-header">
-                            <h3>monterey phoenix - autonomous surface vessel</h3>
-                            <span class="project-expand-icon">▶</span>
-                        </div>
-                        <p>programmed autonomous behaviors for surface robot at west point robotics research center.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">c++</span>
-                            <span class="tech-tag">moos-ivp</span>
-                            <span class="tech-tag">robotics</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item project-item" onclick="openProject(6)">
-                        <div class="project-header">
                             <h3>swift app development - ios applications</h3>
                             <span class="project-expand-icon">▶</span>
                         </div>
@@ -272,7 +252,7 @@
                         </div>
                     </div>
 
-                    <div class="info-item project-item" onclick="openProject(7)">
+                    <div class="info-item project-item" onclick="openProject(6)">
                         <div class="project-header">
                             <h3>cyberpatriot - cybersecurity competition</h3>
                             <span class="project-expand-icon">▶</span>
@@ -473,32 +453,6 @@
     <div class="project-detail-overlay" id="project-overlay-5">
         <div class="project-detail-card">
             <button class="project-close-btn" onclick="closeProject(5)">✕</button>
-            <h2 class="detail-heading-project">monterey phoenix - behavior modeling interface</h2>
-            <img src="images/projects/monterey-phoenix/monterey-phoenix.png" alt="Monterey Phoenix Research" class="detail-image">
-            <p class="detail-text">developed interface between monterey phoenix behavior modeling tool and moos-ivp autonomy stack during virtual internship at west point robotics research center.</p>
-            <p class="detail-text"><strong class="detail-strong-project">project evolution:</strong></p>
-            <ul class="detail-list">
-                <li>initial prototype developed in bash (inefficient but functional)</li>
-                <li>rewrote in python for improved performance</li>
-                <li>created versatile input structures for mission simulations</li>
-                <li>developed complex state machine models</li>
-                <li>significantly reduced computational complexity</li>
-            </ul>
-            <p class="detail-text"><strong class="detail-strong-project">achievement:</strong> presented research paper at spie defense & commercial sensing conference.</p>
-            <p class="detail-text"><strong class="detail-strong-project">repository:</strong> <a href="https://github.com/luke-baker24/py-mp-decomp" target="_blank" class="detail-link-project">github.com/luke-baker24/py-mp-decomp</a></p>
-            <div class="tech-tags">
-                <span class="tech-tag">python</span>
-                <span class="tech-tag">bash</span>
-                <span class="tech-tag">moos-ivp</span>
-                <span class="tech-tag">monterey phoenix</span>
-                <span class="tech-tag">behavior modeling</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-detail-overlay" id="project-overlay-6">
-        <div class="project-detail-card">
-            <button class="project-close-btn" onclick="closeProject(6)">✕</button>
             <h2 class="detail-heading-project">swift app development - ancient history learning app</h2>
             <video controls class="detail-image" preload="metadata">
                 <source src="images/projects/swift-app/swift-app.mov" type="video/quicktime">
@@ -523,9 +477,9 @@
         </div>
     </div>
 
-    <div class="project-detail-overlay" id="project-overlay-7">
+    <div class="project-detail-overlay" id="project-overlay-6">
         <div class="project-detail-card">
-            <button class="project-close-btn" onclick="closeProject(7)">✕</button>
+            <button class="project-close-btn" onclick="closeProject(6)">✕</button>
             <h2 class="detail-heading-project">cyberpatriot - national cybersecurity competition</h2>
             <img src="images/projects/cyberpatriot/cyberpatriot.jpg" alt="CyberPatriot Competition" class="detail-image">
             <p class="detail-text">competed in national cyberpatriot competition from freshman to senior year.</p>
