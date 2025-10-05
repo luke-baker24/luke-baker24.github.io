@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Baker - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="aurora-canvas"></canvas>
+
+    <div class="container">
+        <div class="main-card color-contact">
+            <div class="header">
+                <h1 class="name">luke baker</h1>
+                <p class="tagline">computer science & engineering student</p>
+            </div>
+
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="contact">contact</button>
+                <button class="tab-btn" data-tab="about">about</button>
+                <button class="tab-btn" data-tab="education">education</button>
+                <button class="tab-btn" data-tab="experience">experience</button>
+                <button class="tab-btn" data-tab="projects">projects</button>
+                <button class="tab-btn" data-tab="research">research</button>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="content-section active" id="contact">
+                <h2>contact</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>get in touch</h3>
+                        <p class="detail-text">i'm seeking spring 2026 internships in embedded systems and robotics. let's connect!</p>
+                        <div class="contact-links">
+                            <a href="mailto:lukemb152@gmail.com" class="contact-link">lukemb152@gmail.com</a>
+                            <a href="https://www.linkedin.com/in/bakerlm" class="contact-link" target="_blank">linkedin</a>
+                            <a href="https://github.com/luke-baker24" class="contact-link" target="_blank">github</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <h3>skills</h3>
+                        <p><strong>languages:</strong> c++, c#, c, python, java, swift, bash, assembly, verilog, arduino, html/css/javascript</p>
+                        <p><strong>frameworks & tools:</strong> qt, .net, xna, fna, flask, pytorch, firebase, xcode, git, github, docker, unity</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="content-section" id="about">
+                <h2>about me</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <ul>
+                            <li>i'm a sophomore at rose-hulman institute of technology pursuing a bachelor of science in computer science with a minor in electrical & computer engineering and robotics. with a 4.00 gpa, i'm passionate about embedded systems, robotics, and creating impactful software solutions.</li>
+                            <li>i have 5 years of c++ development experience across collaborative and individual projects, and have deployed software to linux on robots and embedded devices for 3 companies across 4 summers. i've led 4 impactful research projects for the nsa, army, navy, marine corps, and coast guard, focusing on autonomous systems and robotics.</li>
+                            <li>currently, i'm working as a software co-op at raytheon applied signal technology, developing c++ software for signal processing. previously, i served as lead intern at the us military academy robotics research center, where i coordinated international robotics research events and directed teams in executing complex autonomous robot missions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="content-section" id="education">
+                <h2>education</h2>
+                <div class="info-item">
+                    <h3>rose-hulman institute of technology</h3>
+                    <p><strong>terre haute, in | expected graduation: may 2028</strong></p>
+                    <p><strong>bachelor of science, computer science</strong></p>
+                    <p><strong>bachelor of science, computer engineering</strong></p>
+                    <p><strong>minor:</strong> robotics</p>
+                    <p><strong>gpa:</strong> 4.00</p>
+                    <br>
+                    <p><strong>relevant coursework completed:</strong></p>
+                    <ul>
+                        <li>data structures & algorithms</li>
+                        <li>algorithmic problem solving</li>
+                        <li>systems programming</li>
+                    </ul>
+                    <br>
+                    <p><strong>upcoming coursework:</strong></p>
+                    <ul>
+                        <li>circuits & systems</li>
+                        <li>computer architecture</li>
+                        <li>embedded systems</li>
+                        <li>operating systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="content-section" id="experience">
+                <h2>experience</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3><a href="https://www.collinsaerospace.com/what-we-do/industries/military-and-defense/communications/applied-signal-technology" target="_blank">raytheon applied signal technology</a></h3>
+                        <p><strong>software engineering intern</strong> | san jose, ca | june 2026 – august 2026</p>
+                        <ul>
+                            <li>working on signal analysis team developing software to analyze captured signal files and extract data</li>
+                        </ul>
+                        <p><strong>software engineering co-op</strong> | remote | august 2025 – may 2026</p>
+                        <ul>
+                            <li>developing c++ software for extracting and analyzing data from captures of radio wave-frequency signals</li>
+                            <li>working on signal analysis sub-team, deploying to linux and windows environments</li>
+                        </ul>
+                        <p><strong>software engineering intern</strong> | salt lake city, ut | june – august 2025</p>
+                        <ul>
+                            <li>patched 10+ long-standing c++ user interface bugs to improve experience as requested by customers, enabling smoother workflow when examining signals</li>
+                            <li>created interface to extract packet data from signals via fpga to frontend, across 4 distinct device codebases, enabling users to view signal data and metadata in pcap files with wireshark</li>
+                            <li>developed cross-platform real-time signal processing software for 4 devices in an embedded environment</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3><a href="https://www.westpoint.edu/research/west-point-werx/robotics-research-center" target="_blank">us military academy robotics research center</a></h3>
+                        <p><strong>lead software engineering intern</strong> | west point, ny | july 2022 – august 2024</p>
+                        <ul>
+                            <li>coordinated 3 five eyes robotics research events with 8 international organizations</li>
+                            <li>directed 10+ interns to execute capture-the-flag games between teams of large aquatic surface robots</li>
+                            <li>debugged docker container entries from 8 international organizations prior to 3 events to fix autonomy</li>
+                            <li>collected and analyzed gigabytes of logs from 38 live and 23 simulated games using telemetry data, supporting multiple government research projects</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3><a href="https://nps.edu/" target="_blank">monterey phoenix virtual internship program</a></h3>
+                        <p><strong>software engineering intern</strong> | remote | july 2022 – july 2023</p>
+                        <ul>
+                            <li>developed and published python framework converting behavior models into c++ autonomy code to validate 3 complex scenarios, supporting naval postgraduate school and marine corps research</li>
+                            <li>managed robot interface while demonstrating autonomous search-and-rescue live to 10+ government research fellows</li>
+                            <li>presented research and gave 15-minute talk at spie defense & commercial sensing 2023 conference</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Section (merged with Publications) -->
+            <div class="content-section" id="research">
+                <h2>research & publications</h2>
+                <div class="info-grid">
+                    <div class="info-item project-item" onclick="openResearch(0)">
+                        <div class="project-header">
+                            <h3>the performance of chatgpt developing code for data structures courses</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>developed optimal prompting techniques for generating data structure code. presented at rose research fellows/iprop symposium 2025.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">large language models</span>
+                            <span class="tech-tag">data structures</span>
+                            <span class="tech-tag">ai prompting</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openResearch(1)">
+                        <div class="project-header">
+                            <h3>comparing reward functions of decentralized machine learning agents</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>compared reinforcement learning training methods. won office of naval research naval science award at unlv science & engineering fair 2024.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">python</span>
+                            <span class="tech-tag">gymnasium</span>
+                            <span class="tech-tag">reinforcement learning</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openResearch(2)">
+                        <div class="project-header">
+                            <h3>spie defense & commercial sensing 2023 conference</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>first author & speaker for behavior modeling interface paper. collaborator on two additional robotics papers.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">python</span>
+                            <span class="tech-tag">autonomy</span>
+                            <span class="tech-tag">behavior modeling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="content-section" id="projects">
+                <h2>featured projects</h2>
+                <div class="info-grid">
+                    <div class="info-item project-item" onclick="openProject(0)">
+                        <div class="project-header">
+                            <h3>daft punk helmet with animated visor</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>built a helmet out of 8 3d prints; embedded an arduino and 16 by 32 animated led matrix in the visor.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">arduino</span>
+                            <span class="tech-tag">c++</span>
+                            <span class="tech-tag">led matrix</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(1)">
+                        <div class="project-header">
+                            <h3>vex robotics - lead programmer</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>lead programmer for teams 6891m and 6891b. won 7 awards, set 4 state records and 1 world record. nevada skills champions 2023-2024.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">c++</span>
+                            <span class="tech-tag">python</span>
+                            <span class="tech-tag">pid control</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(2)">
+                        <div class="project-header">
+                            <h3>nsa maritime search-and-rescue using computer vision</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>trained accurate classification model on custom 3400 image data set of life jackets.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">yolo</span>
+                            <span class="tech-tag">python</span>
+                            <span class="tech-tag">raspberry pi</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(3)">
+                        <div class="project-header">
+                            <h3>crownengine - custom game engine</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>built custom game engine from scratch. published 9+ games on itch.io including ludum dare and gmtk jam entries.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">c#</span>
+                            <span class="tech-tag">xna/fna</span>
+                            <span class="tech-tag">game engine</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(4)">
+                        <div class="project-header">
+                            <h3>endless escapade - lead programmer</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>led a team of 20+ developers and artists globally creating an appraised mod for terraria.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">c#</span>
+                            <span class="tech-tag">directx</span>
+                            <span class="tech-tag">shaders</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(5)">
+                        <div class="project-header">
+                            <h3>monterey phoenix - autonomous surface vessel</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>programmed autonomous behaviors for surface robot at west point robotics research center.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">c++</span>
+                            <span class="tech-tag">moos-ivp</span>
+                            <span class="tech-tag">robotics</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(6)">
+                        <div class="project-header">
+                            <h3>swift app development - ios applications</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>developed ios applications using swift, firebase, and modern app development practices.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">swift</span>
+                            <span class="tech-tag">firebase</span>
+                            <span class="tech-tag">swiftui</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(7)">
+                        <div class="project-header">
+                            <h3>cyberpatriot - cybersecurity competition</h3>
+                            <span class="project-expand-icon">▶</span>
+                        </div>
+                        <p>competed in national cybersecurity competition focused on system hardening and security practices.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">linux</span>
+                            <span class="tech-tag">windows</span>
+                            <span class="tech-tag">cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership Section -->
+            <div class="content-section" id="leadership">
+                <h2>leadership & extracurriculars</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>rose-hulman noblitt scholars</h3>
+                        <p><strong>august 2024 - may 2028</strong></p>
+                        <p>selective full-ride scholarship supporting self-directed learning and service (6% of class)</p>
+                        <ul>
+                            <li><strong>social subcommittee co-chair</strong> - august 2025 - may 2026</li>
+                            <li><strong>mentorship subcommittee member</strong> - august 2025 - may 2026</li>
+                            <li><strong>social media subcommittee member</strong> - august 2025 - may 2026</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>computer science student advisory board</h3>
+                        <p><strong>student representative | april 2025 - april 2026</strong></p>
+                        <ul>
+                            <li>voicing student feedback to faculty on curriculum and department initiatives</li>
+                            <li>managing mentorship events for incoming and underclass students</li>
+                            <li>member of mentorship committee</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>rose-hulman admissions team</h3>
+                        <p><strong>tour guide | august 2024 - may 2025</strong></p>
+                        <ul>
+                            <li>gave guided tours to prospective students and families</li>
+                            <li>represented the computer science and engineering programs</li>
+                            <li>shared personal experiences and insights about campus life</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>additional roles</h3>
+                        <ul>
+                            <li><strong>rose research fellows</strong> - studied large language models and data structures (december 2024 - may 2025)</li>
+                            <li><strong>calculus 3 grader</strong> - graded 50+ students' quizzes and homework (december 2024 - february 2025)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Project Detail Overlays -->
+    <div class="project-detail-overlay" id="project-overlay-0">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(0)">✕</button>
+            <h2 class="detail-heading-project">daft punk helmet with animated visor</h2>
+            <img src="images/projects/daftpunk-helmet.jpg" alt="Daft Punk Helmet" class="detail-image">
+            <p class="detail-text">built a helmet out of 8 3d prints; embedded an arduino and 16 by 32 animated led matrix in the visor.</p>
+            <p class="detail-text"><strong class="detail-strong-project">technical details:</strong> developed arduino program to convert song lyrics into animated effects displayed through the led screen. integrated custom animations synchronized with music playback.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">arduino</span>
+                <span class="tech-tag">c++</span>
+                <span class="tech-tag">led matrix</span>
+                <span class="tech-tag">3d printing</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-1">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(1)">✕</button>
+            <h2 class="detail-heading-project">vex robotics - lead programmer</h2>
+            <img src="images/projects/vex-robot.jpg" alt="VEX Robot" class="detail-image">
+            <p class="detail-text">lead programmer for teams 6891m m.o.r.f. and 6891b blackjack, competing in 2022-2023 spin up and 2023-2024 over under seasons.</p>
+            <p class="detail-text"><strong class="detail-strong-project">awards (team 6891b):</strong> 7 competition awards, 4 state records, 1 world record, 2023-2024 nevada skills champions</p>
+            <p class="detail-text"><strong class="detail-strong-project">technical projects:</strong></p>
+            <ul class="detail-list">
+                <li><strong>autonomous simulator</strong> - pygame program for testing autonomous routines without physical hardware</li>
+                <li><strong>odometry test rig</strong> - custom rig with heads-up display for verifying position tracking systems</li>
+                <li><strong>computer vision</strong> - developed object detection and triball retrieval routines (experimental)</li>
+                <li><strong>pid control</strong> - tuned drivetrain controllers using vernier's logger pro</li>
+                <li><strong>heads-up display</strong> - real-time motor temperatures and position tracking during autonomous</li>
+                <li><strong>graphing utility</strong> - debugging tool with automatic axis scaling for data visualization</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">team:</strong> jake umebayashi, felipe furtado, rhys gallagher, preston beery. coached by daniel kober and jose diaz.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">c++</span>
+                <span class="tech-tag">python</span>
+                <span class="tech-tag">pygame</span>
+                <span class="tech-tag">pid control</span>
+                <span class="tech-tag">computer vision</span>
+                <span class="tech-tag">odometry</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-2">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(2)">✕</button>
+            <h2 class="detail-heading-project">nsa maritime search-and-rescue using computer vision</h2>
+            <video controls class="detail-image" preload="metadata">
+                <source src="images/projects/aquaticus.mkv" type="video/x-matroska">
+                <source src="images/projects/aquaticus.mkv" type="video/mp4">
+                your browser does not support this video format. the video file is available at images/projects/aquaticus.mkv
+            </video>
+            <p class="detail-text">demonstrated surveyor searobots as search-and-rescue vessels during second summer at west point robotics research center.</p>
+            <p class="detail-text"><strong class="detail-strong-project">technical implementation:</strong></p>
+            <ul class="detail-list">
+                <li>trained yolo model on custom dataset of life vest images floating in a lake</li>
+                <li>developed homography calculations to estimate robot-to-vest distance</li>
+                <li>created and executed moos-ivp missions to launch and control the robot</li>
+                <li>integrated yolo detection and distance estimation into mission system</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">demonstration:</strong> successfully presented to national security agency, coast guard, navy, and army research fellows.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">yolo</span>
+                <span class="tech-tag">python</span>
+                <span class="tech-tag">moos-ivp</span>
+                <span class="tech-tag">raspberry pi</span>
+                <span class="tech-tag">computer vision</span>
+                <span class="tech-tag">homography</span>
+                <span class="tech-tag">autonomous navigation</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-3">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(3)">✕</button>
+            <h2 class="detail-heading-project">crownengine - custom game engine</h2>
+            <video controls class="detail-image" preload="metadata">
+                <source src="images/projects/crownengine.mp4" type="video/mp4">
+                your browser does not support this video format.
+            </video>
+            <p class="detail-text">custom game engine built from scratch, inspired by monogame after playing celeste. features entity-component-system framework, tile systems, rendering tools, and map loading.</p>
+            <p class="detail-text"><strong class="detail-strong-project">published games (9+ on itch.io):</strong></p>
+            <ul class="detail-list">
+                <li><strong>hourglass boy</strong> - platformer (ludum dare 50)</li>
+                <li><strong>deprecated</strong> - platformer</li>
+                <li><strong>twinshot</strong> - arcade shooter</li>
+                <li><strong>shackled</strong> - platformer</li>
+                <li><strong>tests</strong> - platformer (ludum dare 48)</li>
+                <li><strong>sir galahad's quest</strong> - roguelike survival</li>
+                <li><strong>intercom</strong> - puzzle game</li>
+                <li><strong>scramble in the sewers</strong> - action (gmtk 2019)</li>
+                <li><strong>rogue runner</strong> - roguelike action</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">portfolio:</strong> <a href="https://epiccrownking.itch.io/" target="_blank" class="detail-link-project">epiccrownking.itch.io</a></p>
+            <div class="tech-tags">
+                <span class="tech-tag">c#</span>
+                <span class="tech-tag">xna/fna</span>
+                <span class="tech-tag">game engine development</span>
+                <span class="tech-tag">graphics programming</span>
+                <span class="tech-tag">game jams</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-4">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(4)">✕</button>
+            <h2 class="detail-heading-project">endless escapade - lead programmer</h2>
+            <video controls class="detail-image" preload="metadata">
+                <source src="images/projects/endless-escapade.mp4" type="video/mp4">
+                your browser does not support this video format.
+            </video>
+            <p class="detail-text">terraria mod adding ocean environment to expand game world exploration. developed may 2020 - july 2022, progressing from artist/programmer to lead programmer.</p>
+            <p class="detail-text"><strong class="detail-strong-project">technical features:</strong></p>
+            <ul class="detail-list">
+                <li>custom entity-component-system framework</li>
+                <li>water and cloud shaders using perlin and vernier noise maps</li>
+                <li>custom convex collision system for boats</li>
+                <li>ziplining mechanics with velocity/position adjustments</li>
+                <li>procedural animations for campfire, banners, and enemies</li>
+                <li>underwater "glowshroom" lighting effects</li>
+                <li>procedural weapon effects (thunder gauntlet, lightsaber-style swords)</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">repositories:</strong> open-source project with two github repositories - <a href="https://github.com/EndlessEscapade/EndlessEscapade" target="_blank" class="detail-link-project">current</a> and <a href="https://github.com/OSGAgaming/EEMod" target="_blank" class="detail-link-project">former</a></p>
+            <div class="tech-tags">
+                <span class="tech-tag">c#</span>
+                <span class="tech-tag">directx</span>
+                <span class="tech-tag">shaders</span>
+                <span class="tech-tag">ecs</span>
+                <span class="tech-tag">procedural animation</span>
+                <span class="tech-tag">team leadership</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-5">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(5)">✕</button>
+            <h2 class="detail-heading-project">monterey phoenix - behavior modeling interface</h2>
+            <img src="images/projects/monterey-phoenix.png" alt="Monterey Phoenix Research" class="detail-image">
+            <p class="detail-text">developed interface between monterey phoenix behavior modeling tool and moos-ivp autonomy stack during virtual internship at west point robotics research center.</p>
+            <p class="detail-text"><strong class="detail-strong-project">project evolution:</strong></p>
+            <ul class="detail-list">
+                <li>initial prototype developed in bash (inefficient but functional)</li>
+                <li>rewrote in python for improved performance</li>
+                <li>created versatile input structures for mission simulations</li>
+                <li>developed complex state machine models</li>
+                <li>significantly reduced computational complexity</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">achievement:</strong> presented research paper at spie defense & commercial sensing conference.</p>
+            <p class="detail-text"><strong class="detail-strong-project">repository:</strong> <a href="https://github.com/luke-baker24/py-mp-decomp" target="_blank" class="detail-link-project">github.com/luke-baker24/py-mp-decomp</a></p>
+            <div class="tech-tags">
+                <span class="tech-tag">python</span>
+                <span class="tech-tag">bash</span>
+                <span class="tech-tag">moos-ivp</span>
+                <span class="tech-tag">monterey phoenix</span>
+                <span class="tech-tag">behavior modeling</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-6">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(6)">✕</button>
+            <h2 class="detail-heading-project">swift app development - ancient history learning app</h2>
+            <video controls class="detail-image" preload="metadata">
+                <source src="images/projects/swift-app.mov" type="video/quicktime">
+                <source src="images/projects/swift-app.mov" type="video/mp4">
+                your browser does not support this video format.
+            </video>
+            <p class="detail-text">ios learning app focused on ancient history for 5th graders, developed as capstone project for ios app development course.</p>
+            <p class="detail-text"><strong class="detail-strong-project">features:</strong></p>
+            <ul class="detail-list">
+                <li>custom assets designed in adobe illustrator</li>
+                <li>firebase integration for cloud data storage and persistence</li>
+                <li>interactive educational games</li>
+                <li>developed using swift and swiftui</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">swift</span>
+                <span class="tech-tag">swiftui</span>
+                <span class="tech-tag">firebase</span>
+                <span class="tech-tag">adobe illustrator</span>
+                <span class="tech-tag">ios development</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-7">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(7)">✕</button>
+            <h2 class="detail-heading-project">cyberpatriot - national cybersecurity competition</h2>
+            <img src="images/projects/cyberpatriot.jpg" alt="CyberPatriot Competition" class="detail-image">
+            <p class="detail-text">competed in national cyberpatriot competition from freshman to senior year.</p>
+            <p class="detail-text"><strong class="detail-strong-project">progression:</strong></p>
+            <ul class="detail-list">
+                <li>freshman year: windows security expert on e team</li>
+                <li>sophomore year: switched to linux, made a team</li>
+                <li>junior year: qualified for national finals (12 out of 2,700 teams) - only the second team from nevada to reach finals</li>
+                <li>senior year: focused on training new team members</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">technical contributions:</strong> developed advanced linux security scripts with whiptail user interface, created baselining techniques for vulnerability detection, designed practice ubuntu image for students.</p>
+            <p class="detail-text"><strong class="detail-strong-project">team:</strong> coached by jose diaz. team members: mason devore, lucas bergman, healani dowd, luke dembosky, johndavid abe, logan yaeger.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">cybersecurity</span>
+                <span class="tech-tag">linux</span>
+                <span class="tech-tag">bash scripting</span>
+                <span class="tech-tag">windows</span>
+                <span class="tech-tag">system hardening</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Detail Overlays -->
+    <div class="project-detail-overlay" id="research-overlay-0">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeResearch(0)">✕</button>
+            <h2 class="detail-heading-research">the performance of chatgpt developing code for data structures courses</h2>
+            <img src="images/projects/symposium-2025.jpg" alt="Rose Research Fellows Symposium 2025" class="detail-image">
+            <p class="detail-text"><strong>rose-hulman research | december 2024 - present</strong></p>
+            <ul class="detail-list">
+                <li>conducted research with professor mentor to develop optimal prompting techniques for generating data structure code</li>
+                <li>examined 5 increasingly complex data structures including avl and top-down red-black trees</li>
+                <li>performed 3 types of experiments testing ability to produce test cases and well-written structures</li>
+                <li>presented poster at rose research fellows/iprop symposium 2025</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">large language models</span>
+                <span class="tech-tag">data structures</span>
+                <span class="tech-tag">ai prompting</span>
+                <span class="tech-tag">python</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="research-overlay-1">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeResearch(1)">✕</button>
+            <h2 class="detail-heading-research">comparing reward functions of decentralized machine learning agents</h2>
+            <img src="images/projects/stem-research.jpg" alt="Reinforcement Learning Research" class="detail-image">
+            <p class="detail-text"><strong>independent research | august 2023 - april 2024</strong></p>
+            <ul class="detail-list">
+                <li>trained three reinforcement learning algorithms (control, double, quadruple) using gymnasium library and racecar environments to compare agent performance across different reward functions</li>
+                <li>tested five reward functions with varying levels of feature weighting (velocity, action weighting, positional error)</li>
+                <li>found that control algorithm trained faster initially, but double and quadruple algorithms achieved higher success rates and more stable training over time</li>
+                <li>presented poster at unlv science & engineering fair 2024</li>
+                <li>won office of naval research naval science award</li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">python</span>
+                <span class="tech-tag">gymnasium</span>
+                <span class="tech-tag">reinforcement learning</span>
+                <span class="tech-tag">machine learning</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="research-overlay-2">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeResearch(2)">✕</button>
+            <h2 class="detail-heading-research">spie defense & commercial sensing 2023 conference</h2>
+            <img src="images/projects/monterey-phoenix.png" alt="SPIE Conference" class="detail-image">
+            <p class="detail-text"><strong>orlando, fl | may 2023</strong></p>
+            <ul class="detail-list">
+                <li><strong class="detail-strong-research">first author & speaker:</strong> "creating an interface between behavior-modeling software and a robotic simulation environment" - presented 10-minute talk at international conference, demonstrated python framework for converting behavior models into c++ autonomy code.
+                    <ul>
+                        <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12544/125440R/Creating-an-interface-between-behavior-modeling-software-and-a-robotic/10.1117/12.2663298.full" target="_blank" class="detail-link-research">doi: 10.1117/12.2663298</a></li>
+                    </ul>
+                </li>
+                <li><strong class="detail-strong-research">collaborator:</strong> "behavior analysis of search and rescue operations employing human-machine teams" - analyzed autonomous search-and-rescue systems and human-robot collaboration.
+                    <ul>
+                        <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12544/125440Q/Behavior-analysis-of-search-and-rescue-operations-employing-human-machine/10.1117/12.2663286.full" target="_blank" class="detail-link-research">doi: 10.1117/12.2663286</a></li>
+                    </ul>
+                </li>
+                <li><strong class="detail-strong-research">collaborator:</strong> "state machine execution traces for verifying and validating robot behaviors" - developed methods for verifying and validating robot behaviors using state machine traces.
+                    <ul>
+                        <li><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12544/125440W/State-machine-execution-traces-for-verifying-and-validating-robot-behaviors/10.1117/12.2662585.full" target="_blank" class="detail-link-research">doi: 10.1117/12.2662585</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="tech-tags">
+                <span class="tech-tag">python</span>
+                <span class="tech-tag">autonomy</span>
+                <span class="tech-tag">behavior modeling</span>
+                <span class="tech-tag">monterey phoenix</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/aurora-simple.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

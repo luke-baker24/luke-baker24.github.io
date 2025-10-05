@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke Baker - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0e27;
+            color: #e0e7ff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Aurora background canvas */
+        #aurora-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-card {
+            background: rgba(26, 31, 58, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #00ff88 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #e0e7ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Section-specific tab colors */
+        .tab-btn[data-tab="contact"] {
+            border-color: rgba(0, 255, 136, 0.3);
+        }
+        .tab-btn[data-tab="contact"].active {
+            background: rgba(0, 255, 136, 0.2);
+            border-color: #00ff88;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+            color: #00ff88;
+        }
+
+        .tab-btn[data-tab="about"] {
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+        .tab-btn[data-tab="about"].active {
+            background: rgba(6, 182, 212, 0.2);
+            border-color: #06b6d4;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+            color: #06b6d4;
+        }
+
+        .tab-btn[data-tab="education"] {
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+        .tab-btn[data-tab="education"].active {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: #8b5cf6;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            color: #8b5cf6;
+        }
+
+        .tab-btn[data-tab="experience"] {
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        .tab-btn[data-tab="experience"].active {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            color: #3b82f6;
+        }
+
+        .tab-btn[data-tab="projects"] {
+            border-color: rgba(255, 0, 110, 0.3);
+        }
+        .tab-btn[data-tab="projects"].active {
+            background: rgba(255, 0, 110, 0.2);
+            border-color: #ff006e;
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
+            color: #ff006e;
+        }
+
+        .tab-btn[data-tab="skills"] {
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+        .tab-btn[data-tab="skills"].active {
+            background: rgba(245, 158, 11, 0.2);
+            border-color: #f59e0b;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+            color: #f59e0b;
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* Section-specific heading colors */
+        #contact h2 { color: #00ff88; }
+        #about h2 { color: #06b6d4; }
+        #education h2 { color: #8b5cf6; }
+        #experience h2 { color: #3b82f6; }
+        #projects h2 { color: #ff006e; }
+        #skills h2 { color: #f59e0b; }
+
+        .info-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-item h3 {
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        /* Section-specific h3 colors */
+        #contact h3 { color: #00ff88; }
+        #about h3 { color: #06b6d4; }
+        #education h3 { color: #8b5cf6; }
+        #experience h3 { color: #3b82f6; }
+        #projects h3 { color: #ff006e; }
+        #skills h3 { color: #f59e0b; }
+
+        .info-item p, .info-item li {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .info-item ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-link {
+            color: #00ff88;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(0, 255, 136, 0.1);
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2rem;
+            }
+
+            .main-card {
+                padding: 25px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="aurora-canvas"></canvas>
+
+    <div class="container">
+        <div class="main-card">
+            <div class="header">
+                <h1 class="name">Luke Baker</h1>
+                <p class="tagline">Computer Science & Engineering Student</p>
+            </div>
+
+            <div class="nav-tabs">
+                <button class="tab-btn active" data-tab="contact">Contact</button>
+                <button class="tab-btn" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
+                <button class="tab-btn" data-tab="projects">Projects</button>
+                <button class="tab-btn" data-tab="skills">Skills</button>
+            </div>
+
+            <!-- Contact Section (Default) -->
+            <div class="content-section active" id="contact">
+                <h2>Get In Touch</h2>
+                <p style="color: #94a3b8; margin-bottom: 20px;">I'm seeking Spring 2026 internships in embedded systems and robotics. Let's connect!</p>
+                <div class="contact-links">
+                    <a href="mailto:lukemb152@gmail.com" class="contact-link">lukemb152@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/bakerlm" class="contact-link" target="_blank">LinkedIn</a>
+                    <a href="https://sites.google.com/view/luke-baker/" class="contact-link" target="_blank">Portfolio Site</a>
+                    <a href="tel:+17252520033" class="contact-link">(725) 252-0033</a>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="content-section" id="about">
+                <h2>About Me</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <p>I'm a sophomore at Rose-Hulman Institute of Technology pursuing a Bachelor of Science in Computer Science with a minor in Electrical & Computer Engineering and Robotics. With a 4.00 GPA, I'm passionate about embedded systems, robotics, and creating impactful software solutions.</p>
+                    </div>
+                    <div class="info-item">
+                        <p>I have 5 years of C++ development experience across collaborative and individual projects, and have deployed software to Linux on robots and embedded devices for 3 companies across 4 summers. I've led 4 impactful research projects for the NSA, Army, Navy, Marine Corps, and Coast Guard, focusing on autonomous systems and robotics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="content-section" id="education">
+                <h2>Education</h2>
+                <div class="info-item">
+                    <h3>Rose-Hulman Institute of Technology</h3>
+                    <p><strong>Bachelor of Science, Computer Science</strong></p>
+                    <p><strong>Minor:</strong> Electrical & Computer Engineering, Robotics</p>
+                    <p><strong>GPA:</strong> 4.00 | <strong>Expected Graduation:</strong> May 2028</p>
+                    <p><strong>Location:</strong> Terre Haute, IN</p>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="content-section" id="experience">
+                <h2>Experience</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Raytheon Applied Signal Technology</h3>
+                        <p><strong>Software Engineering Co-Op</strong> | Remote | Aug 2025 – May 2026</p>
+                        <ul>
+                            <li>Developing C++ software for extracting and analyzing data from captures of radio wave-frequency signals</li>
+                            <li>Working on the signal analysis sub-team, deploying to Linux and Windows environments</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>Raytheon Applied Signal Technology</h3>
+                        <p><strong>Software Engineering Intern</strong> | Salt Lake City, UT | Jun – Aug 2025</p>
+                        <ul>
+                            <li>Developed cross-platform real-time signal processing software for 4 devices in an embedded environment</li>
+                            <li>Patched 10+ long-standing C++ user interface bugs improving customer experience and workflow</li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <h3>US Military Academy Robotics Research Center</h3>
+                        <p><strong>Lead Software Engineering Intern</strong> | West Point, NY | Jul 2022 – Aug 2024</p>
+                        <ul>
+                            <li>Coordinated 3 Five Eyes robotics research events with 8 international organizations</li>
+                            <li>Directed 10+ interns to execute capture-the-flag games between teams of large aquatic surface robots</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="content-section" id="projects">
+                <h2>Featured Projects</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Daft Punk Helmet with Animated Visor</h3>
+                        <p>Built a helmet out of 8 3D prints; embedded an Arduino and 16 by 32 animated LED matrix in the visor.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>VEX Robotics Team - Lead Programmer</h3>
+                        <p>Developed robust Python visualization tool for spline-based path-planning. Set autonomous score world record.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>NSA Maritime Search-and-Rescue using Computer Vision</h3>
+                        <p>Trained accurate classification model on custom 3400 image data set of life jackets. Deployed to Raspberry Pi on aquatic robot.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="content-section" id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="info-item">
+                        <h3>Programming Languages</h3>
+                        <p>C++, C#, C, Python, Java, Bash, Assembly, Verilog, Arduino, HTML/CSS/JavaScript, MySQL</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Frameworks & Libraries</h3>
+                        <p>Qt, .NET, XNA, FNA, Flask, jQuery, Ajax, YOLO, Gymnasium, PyTorch</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Software & Tools</h3>
+                        <p>Git, GitHub, GitLab, Jenkins, Docker, Azure, Qt Creator, Unity, Quartus Prime, ModelSim</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Domain Expertise</h3>
+                        <p>Embedded Systems, Robotics & Autonomous Systems, Signal Processing, Computer Vision & Machine Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/aurora-simple.js"></script>
+    <script>
+        // Tab switching functionality with aurora color changes
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Color mappings for each section (RGB)
+        const sectionColors = {
+            'contact': [0, 255, 136],      // Green
+            'about': [6, 182, 212],        // Cyan
+            'education': [139, 92, 246],   // Purple
+            'experience': [59, 130, 246],  // Blue
+            'projects': [255, 0, 110],     // Pink
+            'skills': [245, 158, 11]       // Orange
+        };
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.dataset.tab;
+
+                // Remove active class from all buttons and sections
+                tabBtns.forEach(b => b.classList.remove('active'));
+                contentSections.forEach(s => s.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding section
+                btn.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+
+                // Change aurora color to match the section
+                const color = sectionColors[targetTab];
+                if (color && window.setAuroraColor) {
+                    window.setAuroraColor(color[0], color[1], color[2]);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
