@@ -5,7 +5,7 @@ const contentSections = document.querySelectorAll('.content-section');
 // Color mappings for each section (RGB)
 const sectionColors = {
     'about': [0, 255, 136],        // Green
-    'education': [59, 130, 246],   // Blue
+    'education': [6, 182, 212],    // Teal
     'experience': [139, 92, 246],  // Purple
     'projects': [255, 0, 110],     // Red/Pink
     'research': [255, 105, 180]    // Pink
@@ -99,6 +99,37 @@ function openResearch(index) {
 // Close research detail overlay
 function closeResearch(index) {
     const overlay = document.getElementById(`research-overlay-${index}`);
+    if (overlay) {
+        overlay.classList.remove('active');
+    }
+}
+
+// Open experience detail overlay
+function openExperience(index) {
+    const overlay = document.getElementById(`experience-overlay-${index}`);
+    const mainCard = document.querySelector('.main-card');
+    const detailCard = overlay.querySelector('.project-detail-card');
+
+    if (overlay && mainCard && detailCard) {
+        // Get the main card's dimensions and position
+        const rect = mainCard.getBoundingClientRect();
+
+        // Position the detail card to exactly match the main card
+        detailCard.style.position = 'fixed';
+        detailCard.style.top = `${rect.top}px`;
+        detailCard.style.left = `${rect.left}px`;
+        detailCard.style.width = `${rect.width}px`;
+        detailCard.style.height = `${rect.height}px`;
+        detailCard.style.maxWidth = 'none';
+        detailCard.style.maxHeight = 'none';
+
+        overlay.classList.add('active');
+    }
+}
+
+// Close experience detail overlay
+function closeExperience(index) {
+    const overlay = document.getElementById(`experience-overlay-${index}`);
     if (overlay) {
         overlay.classList.remove('active');
     }

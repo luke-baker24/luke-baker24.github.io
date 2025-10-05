@@ -657,6 +657,14 @@ h2 {
     text-shadow: 0 0 20px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 105, 180, 0.6);
 }
 
+.project-detail-overlay[id^="experience-"] .project-close-btn {
+    color: #8b5cf6;
+}
+
+.project-detail-overlay[id^="experience-"] .project-close-btn:hover {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6);
+}
+
 .project-content {
     margin-top: 20px;
 }
@@ -701,6 +709,32 @@ h2 {
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
 }
 
+/* Experience-specific tech tags use purple */
+#experience .tech-tag,
+#experience-overlay-0 .tech-tag,
+#experience-overlay-1 .tech-tag,
+#experience-overlay-2 .tech-tag {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    color: #a78bfa;
+}
+
+/* Experience section expand icon glow */
+#experience .project-expand-icon {
+    color: #8b5cf6;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+#experience .project-item:hover .project-expand-icon {
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5);
+}
+
+/* Experience overlay border color */
+.project-detail-overlay[id^="experience-"] .project-detail-card {
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
 /* Detail overlay content styling */
 .detail-heading-project {
     color: #ff006e;
@@ -710,6 +744,11 @@ h2 {
 .detail-heading-research {
     color: #ff69b4;
     text-shadow: 0 0 20px rgba(255, 105, 180, 0.6), 0 0 40px rgba(255, 105, 180, 0.3);
+}
+
+.detail-heading-experience {
+    color: #8b5cf6;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.3);
 }
 
 .detail-image {
@@ -745,12 +784,20 @@ h2 {
     color: #ff69b4;
 }
 
+.detail-strong-experience {
+    color: #8b5cf6;
+}
+
 .detail-link-project {
     color: #ff006e;
 }
 
 .detail-link-research {
     color: #ff69b4;
+}
+
+.detail-link-experience {
+    color: #8b5cf6;
 }
 
 /* Job title links in experience section */
