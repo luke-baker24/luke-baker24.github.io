@@ -566,29 +566,34 @@ h2 {
 }
 
 .project-expand-icon {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
-    line-height: 1.2rem;
-    margin-top: 0.1rem;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid currentColor;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    margin-top: 0.3rem;
+    filter: drop-shadow(0 0 10px currentColor);
 }
 
 /* Section-specific expand icon glow */
 #projects .project-expand-icon {
     color: #ff006e;
-    text-shadow: 0 0 10px rgba(255, 0, 110, 0.6), 0 0 20px rgba(255, 0, 110, 0.3);
+    filter: drop-shadow(0 0 6px rgba(255, 0, 110, 0.8)) drop-shadow(0 0 12px rgba(255, 0, 110, 0.4));
 }
 
 #projects .project-item:hover .project-expand-icon {
-    text-shadow: 0 0 15px rgba(255, 0, 110, 0.8), 0 0 30px rgba(255, 0, 110, 0.5);
+    filter: drop-shadow(0 0 10px rgba(255, 0, 110, 1)) drop-shadow(0 0 20px rgba(255, 0, 110, 0.6));
 }
 
 #research .project-expand-icon {
     color: #ff69b4;
-    text-shadow: 0 0 10px rgba(255, 105, 180, 0.6), 0 0 20px rgba(255, 105, 180, 0.3);
+    filter: drop-shadow(0 0 6px rgba(255, 105, 180, 0.8)) drop-shadow(0 0 12px rgba(255, 105, 180, 0.4));
 }
 
 #research .project-item:hover .project-expand-icon {
-    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8), 0 0 30px rgba(255, 105, 180, 0.5);
+    filter: drop-shadow(0 0 10px rgba(255, 105, 180, 1)) drop-shadow(0 0 20px rgba(255, 105, 180, 0.6));
 }
 
 /* Full-card overlay for expanded projects */
@@ -747,7 +752,7 @@ h2 {
 /* Experience section expand icon glow */
 #experience .project-expand-icon {
     color: #8b5cf6;
-    text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+    filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.8)) drop-shadow(0 0 12px rgba(139, 92, 246, 0.4));
 }
 
 #experience .project-item:hover {
@@ -755,7 +760,7 @@ h2 {
 }
 
 #experience .project-item:hover .project-expand-icon {
-    text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5);
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 1)) drop-shadow(0 0 20px rgba(139, 92, 246, 0.6));
 }
 
 /* Experience overlay border color */
