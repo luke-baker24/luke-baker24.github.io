@@ -53,30 +53,38 @@
 
             <!-- Education Section -->
             <div class="content-section" id="education">
-                <div class="info-item">
-                    <h3><a href="https://www.rose-hulman.edu/" class="education-link" target="_blank" style="text-decoration: none;">rose-hulman institute of technology</a></h3>
-                    <p><strong>terre haute, in | expected graduation: may 2028 | gpa: 4.00</strong></p>
-                    <p><strong>bachelors of science in computer science and computer engineering | minor in robotics</strong></p>
-                    <br>
-                    <div class="coursework-grid">
-                        <div>
-                            <p><strong>relevant coursework completed:</strong></p>
-                            <ul>
-                                <li>data structures & algorithms</li>
-                                <li>algorithmic problem solving</li>
-                                <li>intro to computer systems</li>
-                                <li>intro to digital systems</li>
-                            </ul>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3><a href="https://www.rose-hulman.edu/" class="education-link" target="_blank" style="text-decoration: none;">rose-hulman institute of technology</a></h3>
+                        <p><strong>terre haute, in | expected graduation: may 2028 | gpa: 4.00</strong></p>
+                        <p class="degree-info"><strong>bachelors of science in computer science and computer engineering | minor in robotics</strong></p>
+                        <div class="coursework-grid">
+                            <div>
+                                <p><strong>relevant coursework completed:</strong></p>
+                                <ul>
+                                    <li>data structures & algorithms</li>
+                                    <li>algorithmic problem solving</li>
+                                    <li>intro to computer systems</li>
+                                    <li>intro to digital systems</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p><strong>upcoming coursework:</strong></p>
+                                <ul>
+                                    <li>circuits & systems</li>
+                                    <li>computer architecture</li>
+                                    <li>embedded systems</li>
+                                    <li>operating systems</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div>
-                            <p><strong>upcoming coursework:</strong></p>
-                            <ul>
-                                <li>circuits & systems</li>
-                                <li>computer architecture</li>
-                                <li>embedded systems</li>
-                                <li>operating systems</li>
-                            </ul>
-                        </div>
+                        <p class="extracurriculars-section"><strong>extracurriculars:</strong> noblitt scholars, csse student advisory board, <a href="#" class="inline-link-education-projects" onclick="switchToTab('projects'); openProject(0); return false;">makerlab</a>, <a href="#" class="inline-link-education-research" onclick="switchToTab('research'); openResearch(0); return false;">independent research</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3><a href="https://www.faithlutheranlv.org/" class="education-link" target="_blank" style="text-decoration: none;">faith lutheran high school</a></h3>
+                        <p><strong>las vegas, nv | graduated: may 2024 | gpa: 4.00 unweighted, 4.53 weighted</strong></p>
+                        <p class="extracurriculars-section"><strong>extracurriculars:</strong> <a href="#" class="inline-link-education-projects" onclick="switchToTab('projects'); openProject(2); return false;">vex robotics</a>, <a href="#" class="inline-link-education-projects" onclick="switchToTab('projects'); openProject(3); return false;">cyberpatriot</a>, naqt quizbowl</p>
                     </div>
                 </div>
             </div>
@@ -220,19 +228,6 @@
 
                     <div class="info-item project-item" onclick="openProject(1)">
                         <div class="project-header">
-                            <h3>vex robotics - lead programmer</h3>
-                            <span class="project-expand-icon"></span>
-                        </div>
-                        <p>lead programmer for teams 6891m and 6891b. won 7 awards, set 4 state records and 1 world record. nevada skills champions 2023-2024.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">c++</span>
-                            <span class="tech-tag">python</span>
-                            <span class="tech-tag">pid control</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item project-item" onclick="openProject(2)">
-                        <div class="project-header">
                             <h3>nsa maritime search-and-rescue using computer vision</h3>
                             <span class="project-expand-icon"></span>
                         </div>
@@ -244,7 +239,33 @@
                         </div>
                     </div>
 
+                    <div class="info-item project-item" onclick="openProject(2)">
+                        <div class="project-header">
+                            <h3>vex robotics - lead programmer</h3>
+                            <span class="project-expand-icon"></span>
+                        </div>
+                        <p>lead programmer for teams 6891m and 6891b. won 7 awards, set 4 state records and 1 world record. nevada skills champions 2023-2024.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">c++</span>
+                            <span class="tech-tag">python</span>
+                            <span class="tech-tag">pid control</span>
+                        </div>
+                    </div>
+
                     <div class="info-item project-item" onclick="openProject(3)">
+                        <div class="project-header">
+                            <h3>cyberpatriot - cybersecurity competition</h3>
+                            <span class="project-expand-icon"></span>
+                        </div>
+                        <p>competed in national cybersecurity competition focused on system hardening and security practices.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">linux</span>
+                            <span class="tech-tag">windows</span>
+                            <span class="tech-tag">cybersecurity</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item project-item" onclick="openProject(4)">
                         <div class="project-header">
                             <h3>crownengine - custom game engine</h3>
                             <span class="project-expand-icon"></span>
@@ -257,7 +278,7 @@
                         </div>
                     </div>
 
-                    <div class="info-item project-item" onclick="openProject(4)">
+                    <div class="info-item project-item" onclick="openProject(5)">
                         <div class="project-header">
                             <h3>endless escapade - lead programmer</h3>
                             <span class="project-expand-icon"></span>
@@ -270,7 +291,7 @@
                         </div>
                     </div>
 
-                    <div class="info-item project-item" onclick="openProject(5)">
+                    <div class="info-item project-item" onclick="openProject(6)">
                         <div class="project-header">
                             <h3>swift app development - ios applications</h3>
                             <span class="project-expand-icon"></span>
@@ -280,19 +301,6 @@
                             <span class="tech-tag">swift</span>
                             <span class="tech-tag">firebase</span>
                             <span class="tech-tag">swiftui</span>
-                        </div>
-                    </div>
-
-                    <div class="info-item project-item" onclick="openProject(6)">
-                        <div class="project-header">
-                            <h3>cyberpatriot - cybersecurity competition</h3>
-                            <span class="project-expand-icon"></span>
-                        </div>
-                        <p>competed in national cybersecurity competition focused on system hardening and security practices.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">linux</span>
-                            <span class="tech-tag">windows</span>
-                            <span class="tech-tag">cybersecurity</span>
                         </div>
                     </div>
                 </div>
@@ -347,7 +355,10 @@
         <div class="project-detail-card">
             <button class="project-close-btn" onclick="closeProject(0)">✕</button>
             <h2 class="detail-heading-project">daft punk helmet with animated visor</h2>
-            <img src="images/projects/daft-punk/daftpunk-helmet.jpg" alt="Daft Punk Helmet" class="detail-image">
+            <video controls class="detail-image" preload="metadata" style="object-fit: cover; object-position: center; height: 50%;">
+                <source src="images/projects/daft-punk/daft-punk-helmet.mp4" type="video/mp4">
+                your browser does not support this video format.
+            </video>
             <p class="detail-text">built a helmet out of 8 3d prints; embedded an arduino and 16 by 32 animated led matrix in the visor.</p>
             <p class="detail-text"><strong class="detail-strong-project">technical details:</strong> developed arduino program to convert song lyrics into animated effects displayed through the led screen. integrated custom animations synchronized with music playback.</p>
             <div class="tech-tags">
@@ -362,34 +373,6 @@
     <div class="project-detail-overlay" id="project-overlay-1">
         <div class="project-detail-card">
             <button class="project-close-btn" onclick="closeProject(1)">✕</button>
-            <h2 class="detail-heading-project">vex robotics - lead programmer</h2>
-            <img src="images/projects/vex-robotics/vex-robot.jpg" alt="VEX Robot" class="detail-image">
-            <p class="detail-text">lead programmer for teams 6891m m.o.r.f. and 6891b blackjack, competing in 2022-2023 spin up and 2023-2024 over under seasons.</p>
-            <p class="detail-text"><strong class="detail-strong-project">awards (team 6891b):</strong> 7 competition awards, 4 state records, 1 world record, 2023-2024 nevada skills champions</p>
-            <p class="detail-text"><strong class="detail-strong-project">technical projects:</strong></p>
-            <ul class="detail-list">
-                <li><strong>autonomous simulator</strong> - pygame program for testing autonomous routines without physical hardware</li>
-                <li><strong>odometry test rig</strong> - custom rig with heads-up display for verifying position tracking systems</li>
-                <li><strong>computer vision</strong> - developed object detection and triball retrieval routines (experimental)</li>
-                <li><strong>pid control</strong> - tuned drivetrain controllers using vernier's logger pro</li>
-                <li><strong>heads-up display</strong> - real-time motor temperatures and position tracking during autonomous</li>
-                <li><strong>graphing utility</strong> - debugging tool with automatic axis scaling for data visualization</li>
-            </ul>
-            <p class="detail-text"><strong class="detail-strong-project">team:</strong> jake umebayashi, felipe furtado, rhys gallagher, preston beery. coached by daniel kober and jose diaz.</p>
-            <div class="tech-tags">
-                <span class="tech-tag">c++</span>
-                <span class="tech-tag">python</span>
-                <span class="tech-tag">pygame</span>
-                <span class="tech-tag">pid control</span>
-                <span class="tech-tag">computer vision</span>
-                <span class="tech-tag">odometry</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-detail-overlay" id="project-overlay-2">
-        <div class="project-detail-card">
-            <button class="project-close-btn" onclick="closeProject(2)">✕</button>
             <h2 class="detail-heading-project">nsa maritime search-and-rescue using computer vision</h2>
             <video controls class="detail-image" preload="metadata">
                 <source src="images/projects/aquaticus/aquaticus.mkv" type="video/x-matroska">
@@ -417,14 +400,132 @@
         </div>
     </div>
 
+    <div class="project-detail-overlay" id="project-overlay-2">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(2)">✕</button>
+            <h2 class="detail-heading-project">vex robotics - lead programmer</h2>
+            <img src="images/projects/vex-robotics/vex-robot.jpg" alt="VEX Robot" class="detail-image">
+            <p class="detail-text">lead programmer for teams 6891m m.o.r.f. and 6891b blackjack, competing in 2022-2023 spin up and 2023-2024 over under seasons.</p>
+            <p class="detail-text"><strong class="detail-strong-project">awards (team 6891b):</strong> 7 competition awards, 4 state records, 1 world record, 2023-2024 nevada skills champions</p>
+            <p class="detail-text"><strong class="detail-strong-project">technical projects:</strong></p>
+            <ul class="detail-list">
+                <li><strong>autonomous simulator</strong> - pygame program for testing autonomous routines without physical hardware</li>
+                <li><strong>odometry test rig</strong> - custom rig with heads-up display for verifying position tracking systems</li>
+                <li><strong>computer vision</strong> - developed object detection and triball retrieval routines (experimental)</li>
+                <li><strong>pid control</strong> - tuned drivetrain controllers using vernier's logger pro</li>
+                <li><strong>heads-up display</strong> - real-time motor temperatures and position tracking during autonomous</li>
+                <li><strong>graphing utility</strong> - debugging tool with automatic axis scaling for data visualization</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">team:</strong> jake umebayashi, felipe furtado, rhys gallagher, preston beery. coached by daniel kober and jose diaz.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">c++</span>
+                <span class="tech-tag">python</span>
+                <span class="tech-tag">pygame</span>
+                <span class="tech-tag">pid control</span>
+                <span class="tech-tag">computer vision</span>
+                <span class="tech-tag">odometry</span>
+            </div>
+        </div>
+    </div>
+
     <div class="project-detail-overlay" id="project-overlay-3">
         <div class="project-detail-card">
             <button class="project-close-btn" onclick="closeProject(3)">✕</button>
+            <h2 class="detail-heading-project">cyberpatriot - national cybersecurity competition</h2>
+            <img src="images/projects/cyberpatriot/cyberpatriot.jpg" alt="CyberPatriot Competition" class="detail-image">
+            <p class="detail-text">competed in national cyberpatriot competition from freshman to senior year.</p>
+            <p class="detail-text"><strong class="detail-strong-project">progression:</strong></p>
+            <ul class="detail-list">
+                <li>freshman year: windows security expert on e team</li>
+                <li>sophomore year: switched to linux, made a team</li>
+                <li>junior year: qualified for national finals (12 out of 2,700 teams) - only the second team from nevada to reach finals</li>
+                <li>senior year: focused on training new team members</li>
+            </ul>
+            <p class="detail-text"><strong class="detail-strong-project">technical contributions:</strong> developed advanced linux security scripts with whiptail user interface, created baselining techniques for vulnerability detection, designed practice ubuntu image for students.</p>
+            <p class="detail-text"><strong class="detail-strong-project">team:</strong> coached by jose diaz. team members: mason devore, lucas bergman, healani dowd, luke dembosky, johndavid abe, logan yaeger.</p>
+            <div class="tech-tags">
+                <span class="tech-tag">cybersecurity</span>
+                <span class="tech-tag">linux</span>
+                <span class="tech-tag">bash scripting</span>
+                <span class="tech-tag">windows</span>
+                <span class="tech-tag">system hardening</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail-overlay" id="project-overlay-4">
+        <div class="project-detail-card">
+            <button class="project-close-btn" onclick="closeProject(4)">✕</button>
             <h2 class="detail-heading-project">crownengine - custom game engine</h2>
-            <video controls class="detail-image" preload="metadata">
-                <source src="images/projects/crownengine/crownengine.mp4" type="video/mp4">
-                your browser does not support this video format.
-            </video>
+
+            <div class="media-gallery">
+                <div class="media-display">
+                    <video controls class="active-media" preload="metadata" data-index="0" data-caption="early prototype">
+                        <source src="images/projects/crownengine/E-YxDh9UcAMPb3P.mp4" type="video/mp4">
+                    </video>
+                    <div class="gallery-media vertical-pair" data-index="1" data-caption="pong prototype & monolith-inspired game" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/crownengine/E-Y08ucVkAANx8z.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/crownengine/E-Y0zhZUcAMTL4e.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-media vertical-pair" data-index="2" data-caption="early platformer prototypes" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/crownengine/E_B_-jBVgAE7mej.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/crownengine/E-YwI1cUYAIweWe.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <video controls class="gallery-media" preload="metadata" data-index="3" data-caption="centurion platformer" style="display: none;">
+                        <source src="images/projects/crownengine/E-oLCEuVcAEdrDh.mp4" type="video/mp4">
+                    </video>
+                    <video controls class="gallery-media" preload="metadata" data-index="4" data-caption="let's go golfing" style="display: none;">
+                        <source src="images/projects/crownengine/let's go golfing.mp4" type="video/mp4">
+                    </video>
+                    <video controls class="gallery-media" preload="metadata" data-index="5" data-caption="compilation showcase" style="display: none;">
+                        <source src="images/projects/crownengine/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="media-caption">early prototype</div>
+
+                <div class="media-thumbnails">
+                    <div class="thumbnail active" data-index="0" onclick="switchMedia(4, 0)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/crownengine/E-YxDh9UcAMPb3P.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="1" onclick="switchMedia(4, 1)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/crownengine/E-Y08ucVkAANx8z.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="2" onclick="switchMedia(4, 2)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/crownengine/E_B_-jBVgAE7mej.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="3" onclick="switchMedia(4, 3)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/crownengine/E-oLCEuVcAEdrDh.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="4" onclick="switchMedia(4, 4)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/crownengine/let's go golfing.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="5" onclick="switchMedia(4, 5)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/crownengine/Untitled video - Made with Clipchamp.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
             <p class="detail-text">custom game engine built from scratch, inspired by monogame after playing celeste. features entity-component-system framework, tile systems, rendering tools, and map loading.</p>
             <p class="detail-text"><strong class="detail-strong-project">published games (9+ on itch.io):</strong></p>
             <ul class="detail-list">
@@ -449,14 +550,116 @@
         </div>
     </div>
 
-    <div class="project-detail-overlay" id="project-overlay-4">
+    <div class="project-detail-overlay" id="project-overlay-5">
         <div class="project-detail-card">
-            <button class="project-close-btn" onclick="closeProject(4)">✕</button>
+            <button class="project-close-btn" onclick="closeProject(5)">✕</button>
             <h2 class="detail-heading-project">endless escapade - lead programmer</h2>
-            <video controls class="detail-image" preload="metadata">
-                <source src="images/projects/endless-escapade/endless-escapade.mp4" type="video/mp4">
-                your browser does not support this video format.
-            </video>
+
+            <div class="media-gallery">
+                <div class="media-display">
+                    <iframe class="active-media" data-index="0" data-caption="mod overview trailer" src="https://www.youtube.com/embed/8q7HAQ8aoWQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; aspect-ratio: 16/9; border-radius: 8px;"></iframe>
+                    <video controls class="gallery-media" preload="metadata" data-index="1" data-caption="kelp forest biome" style="display: none;">
+                        <source src="images/projects/endless-escapade/KelpForestShowcase.mp4" type="video/mp4">
+                    </video>
+                    <video controls class="gallery-media" preload="metadata" data-index="2" data-caption="scrapwizard boss" style="display: none;">
+                        <source src="images/projects/endless-escapade/scrapwizard.mp4" type="video/mp4">
+                    </video>
+                    <video controls class="gallery-media" preload="metadata" data-index="3" data-caption="gameplay demonstration" style="display: none;">
+                        <source src="images/projects/endless-escapade/Terraria_2__Electric_Boogaloo_2022-06-10_16-03-51.mp4" type="video/mp4">
+                    </video>
+                    <div class="gallery-media vertical-pair" data-index="4" data-caption="ziplining & glowshroom lighting" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/7IKKBXV3ylO5TLl5.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/EiudSEpMWl8NkuOk.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-media vertical-pair" data-index="5" data-caption="weapon effects & procedural animations" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/CezyxlVKjZV7PXzG.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/E-Y0umQVkAIMUjZ.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-media vertical-pair" data-index="6" data-caption="boat mechanics & water shaders" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/FDDTq9vWYAAMf03.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/FE6zwA_UYAULp-R.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-media vertical-pair" data-index="7" data-caption="environment & combat features" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/FIIyFrNX0AYeBfw.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/RBgzfWM5TGzW44qh.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-media vertical-pair" data-index="8" data-caption="additional mechanics & effects" style="display: none;">
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/Y03rBuPc9zENUKVU.mp4" type="video/mp4">
+                        </video>
+                        <video controls preload="metadata">
+                            <source src="images/projects/endless-escapade/fz-Li699wlL4ppRL.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="media-caption">mod overview trailer</div>
+
+                <div class="media-thumbnails">
+                    <div class="thumbnail active" data-index="0" onclick="switchMedia(5, 0)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/endless-escapade.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="1" onclick="switchMedia(5, 1)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/KelpForestShowcase.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="2" onclick="switchMedia(5, 2)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/scrapwizard.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="3" onclick="switchMedia(5, 3)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/Terraria_2__Electric_Boogaloo_2022-06-10_16-03-51.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="4" onclick="switchMedia(5, 4)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/7IKKBXV3ylO5TLl5.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="5" onclick="switchMedia(5, 5)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/CezyxlVKjZV7PXzG.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="6" onclick="switchMedia(5, 6)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/FDDTq9vWYAAMf03.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="7" onclick="switchMedia(5, 7)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/FIIyFrNX0AYeBfw.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="thumbnail" data-index="8" onclick="switchMedia(5, 8)">
+                        <video muted preload="metadata">
+                            <source src="images/projects/endless-escapade/Y03rBuPc9zENUKVU.mp4#t=0.5" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
             <p class="detail-text">terraria mod adding ocean environment to expand game world exploration. developed may 2020 - july 2022, progressing from artist/programmer to lead programmer.</p>
             <p class="detail-text"><strong class="detail-strong-project">technical features:</strong></p>
             <ul class="detail-list">
@@ -480,9 +683,9 @@
         </div>
     </div>
 
-    <div class="project-detail-overlay" id="project-overlay-5">
+    <div class="project-detail-overlay" id="project-overlay-6">
         <div class="project-detail-card">
-            <button class="project-close-btn" onclick="closeProject(5)">✕</button>
+            <button class="project-close-btn" onclick="closeProject(6)">✕</button>
             <h2 class="detail-heading-project">swift app development - ancient history learning app</h2>
             <video controls class="detail-image" preload="metadata">
                 <source src="images/projects/swift-app/swift-app.mov" type="video/quicktime">
@@ -503,31 +706,6 @@
                 <span class="tech-tag">firebase</span>
                 <span class="tech-tag">adobe illustrator</span>
                 <span class="tech-tag">ios development</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-detail-overlay" id="project-overlay-6">
-        <div class="project-detail-card">
-            <button class="project-close-btn" onclick="closeProject(6)">✕</button>
-            <h2 class="detail-heading-project">cyberpatriot - national cybersecurity competition</h2>
-            <img src="images/projects/cyberpatriot/cyberpatriot.jpg" alt="CyberPatriot Competition" class="detail-image">
-            <p class="detail-text">competed in national cyberpatriot competition from freshman to senior year.</p>
-            <p class="detail-text"><strong class="detail-strong-project">progression:</strong></p>
-            <ul class="detail-list">
-                <li>freshman year: windows security expert on e team</li>
-                <li>sophomore year: switched to linux, made a team</li>
-                <li>junior year: qualified for national finals (12 out of 2,700 teams) - only the second team from nevada to reach finals</li>
-                <li>senior year: focused on training new team members</li>
-            </ul>
-            <p class="detail-text"><strong class="detail-strong-project">technical contributions:</strong> developed advanced linux security scripts with whiptail user interface, created baselining techniques for vulnerability detection, designed practice ubuntu image for students.</p>
-            <p class="detail-text"><strong class="detail-strong-project">team:</strong> coached by jose diaz. team members: mason devore, lucas bergman, healani dowd, luke dembosky, johndavid abe, logan yaeger.</p>
-            <div class="tech-tags">
-                <span class="tech-tag">cybersecurity</span>
-                <span class="tech-tag">linux</span>
-                <span class="tech-tag">bash scripting</span>
-                <span class="tech-tag">windows</span>
-                <span class="tech-tag">system hardening</span>
             </div>
         </div>
     </div>
@@ -643,6 +821,7 @@
         <div class="project-detail-card">
             <button class="project-close-btn" onclick="closeExperience(1)">✕</button>
             <h2 class="detail-heading-experience">us military academy robotics research center</h2>
+            <img src="images/experience/usma-rrc/usma-rrc.jpg" alt="USMA Robotics Research Center" class="detail-image">
             <p class="detail-text"><strong class="detail-strong-experience">software engineering intern, lead software engineering intern</strong> | west point, ny & remote | july 2022 – july 2024</p>
             <ul class="detail-list">
                 <li>coordinated 3 five eyes robotics research events with 8 international organizations</li>
