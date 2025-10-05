@@ -513,8 +513,25 @@ h2 {
 /* Experience job title styling */
 .experience-title {
     color: #94a3b8;
-    font-weight: normal;
+    font-weight: bold;
     text-shadow: none;
+}
+
+/* Experience position layout */
+.experience-position {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.position-left {
+    flex: 1;
+}
+
+.position-date {
+    margin-left: 20px;
+    white-space: nowrap;
 }
 
 .skills-grid {
