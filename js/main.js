@@ -167,3 +167,83 @@ function switchToTab(tabName) {
         targetBtn.click();
     }
 }
+
+// Media gallery switching functionality
+function switchMedia(projectIndex, mediaIndex) {
+    const overlay = document.getElementById(`project-overlay-${projectIndex}`);
+    if (!overlay) return;
+
+    const gallery = overlay.querySelector('.media-gallery');
+    if (!gallery) return;
+
+    // Get all media elements (including vertical pairs and iframes) and thumbnails
+    const mediaElements = gallery.querySelectorAll('.media-display > video, .media-display > .vertical-pair, .media-display > img, .media-display > iframe');
+    const thumbnails = gallery.querySelectorAll('.thumbnail');
+    const captionElement = gallery.querySelector('.media-caption');
+
+    // Pause all videos (including those in vertical pairs)
+    gallery.querySelectorAll('.media-display video').forEach(video => {
+        video.pause();
+        video.currentTime = 0;
+    });
+
+    // Hide all media and remove active class
+    mediaElements.forEach(media => {
+        media.classList.remove('active-media');
+        media.classList.add('gallery-media');
+        media.style.display = 'none';
+    });
+
+    // Remove active class from all thumbnails
+    thumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+
+    // Show selected media
+    const selectedMedia = gallery.querySelector(`.media-display > [data-index="${mediaIndex}"]`);
+    if (selectedMedia) {
+        selectedMedia.classList.remove('gallery-media');
+        selectedMedia.classList.add('active-media');
+
+        // Handle display based on type
+        if (selectedMedia.classList.contains('vertical-pair')) {
+            selectedMedia.style.display = 'flex';
+        } else {
+            selectedMedia.style.display = 'block';
+        }
+
+        // Update caption
+        const caption = selectedMedia.getAttribute('data-caption');
+        if (captionElement && caption) {
+            captionElement.textContent = caption;
+        }
+
+        // Auto-play video if it's a video element
+        if (selectedMedia.tagName === 'VIDEO') {
+            selectedMedia.play().catch(e => {
+                // Auto-play might be blocked by browser, that's okay
+                console.log('Auto-play prevented:', e);
+            });
+        }
+        // For vertical pairs, play the first video
+        else if (selectedMedia.classList.contains('vertical-pair')) {
+            const firstVideo = selectedMedia.querySelector('video');
+            if (firstVideo) {
+                firstVideo.play().catch(e => {
+                    console.log('Auto-play prevented:', e);
+                });
+            }
+        }
+        // For iframes (YouTube embeds), reload the src to reset
+        else if (selectedMedia.tagName === 'IFRAME') {
+            const currentSrc = selectedMedia.getAttribute('src');
+            selectedMedia.setAttribute('src', currentSrc);
+        }
+    }
+
+    // Add active class to selected thumbnail
+    const selectedThumbnail = gallery.querySelector(`.thumbnail[data-index="${mediaIndex}"]`);
+    if (selectedThumbnail) {
+        selectedThumbnail.classList.add('active');
+    }
+}
